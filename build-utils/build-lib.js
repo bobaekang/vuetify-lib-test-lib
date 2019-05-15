@@ -28,29 +28,18 @@ execSync(
 // ${libConfig}/dist
 renameIndex();
 
-// For each component in the src directory...
-for (const componentName of componentNames) {
-  // Build the component individually
-  console.info(`🏗 Building ${componentName}`);
-  execSync(
-    `${vueCliServicePath} build src/${componentName}.vue --target lib --name index --dest dist/${componentName}/`
-  );
+// // For each component in the src directory...
+// for (const componentName of componentNames) {
+//   // Build the component individually
+//   console.info(`🏗 Building ${componentName}`);
+//   execSync(
+//     `${vueCliServicePath} build src/${componentName}.vue --target lib --name index --dest dist/${componentName}/`
+//   );
 
-  // Rename the CommonJS build so that it can be imported with
-  // ${libConfig}/dist/ComponentName
-  renameIndex(componentName);
-}
-
-if (process.env.VUE_APP_E2E) {
-  const packagesDir = getPath("../packages");
-  fs.copySync(packagesDir, getPath("../tests/e2e/fixtures/public/packages"));
-  fs.readdirSync(packagesDir).forEach(packageDirName => {
-    fs.copySync(
-      path.resolve(packagesDir, packageDirName),
-      getPath(`../node_modules/${packageDirName}`)
-    );
-  });
-}
+//   // Rename the CommonJS build so that it can be imported with
+//   // ${libConfig}/dist/ComponentName
+//   renameIndex(componentName);
+// }
 
 function renameIndex(componentName) {
   const builds = [
