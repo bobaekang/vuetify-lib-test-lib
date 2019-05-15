@@ -1,0 +1,12 @@
+{
+  "name": "vuetify-lib-test-lib",
+  "description": "An example component library built with Vue CLI 3 and Vuetify.",
+  "author": {
+    "name": "Bobae Kang",
+    "email": "bkang.dev@gmail.com",
+    "github": "bobaekang"
+  },
+  "peerDependencies": {
+    "vue": ">=2.0.0"
+  }
+}
