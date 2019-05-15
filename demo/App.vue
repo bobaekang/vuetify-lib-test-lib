@@ -1,5 +1,6 @@
 <template>
   <div id="app">
-    <TestHomeIcon />
+    <HomeIcon />
+    <ExampleCard msg="Hello, world!" />
   </div>
 </template>
