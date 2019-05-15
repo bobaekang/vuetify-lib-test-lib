@@ -1,7 +1,6 @@
 {
   "name": "vuetify-lib-test-lib",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "node build-utils/update-index-file.js && vue-cli-service serve",
     "build": "node build-utils/build-lib.js",
