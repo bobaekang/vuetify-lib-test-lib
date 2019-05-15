@@ -12,14 +12,16 @@ Vue.use(Vuetify, {
   iconfont: 'md',
 })
 
-import TestHomeIcon from './TestHomeIcon.vue'
+import ExampleCard from './ExampleCard.vue'
+import HomeIcon from './HomeIcon.vue'
 
 // Export components individually
-export { TestHomeIcon }
+export { ExampleCard, HomeIcon }
 
 // What should happen if the user installs the library as a plugin
 function install(Vue) {
-  Vue.component('TestHomeIcon', TestHomeIcon)
+  Vue.component('ExampleCard', ExampleCard)
+  Vue.component('HomeIcon', HomeIcon)
 }
 
 // Export the library as a plugin

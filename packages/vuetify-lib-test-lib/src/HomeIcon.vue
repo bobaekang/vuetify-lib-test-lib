@@ -6,9 +6,6 @@
 
 <script>
 export default {
-  name: "TestHomeIcon",
-  props: {
-    msg: String
-  }
+  name: "HomeIcon"
 };
 </script>
